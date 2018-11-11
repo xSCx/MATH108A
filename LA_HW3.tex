@@ -1,0 +1,87 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[margin=1.25in]{geometry}
+
+\usepackage{comment}
+
+\begin{document}
+
+\begin{center}
+{\bf 108A HW3 }\\
+
+\end{center}
+\rightline{Yuchen Wang,Luis Ramirez,Shengbo Zhang}
+\textbf{Section 3} \\
+\textbf{Exercise 3}\\
+\\
+Let Y be the subspace of $\mathbb{R}^4$ consisting of all $x \in \mathbb{R}^4$ such that\\ 
+$x_1 + 2x_2 =0$ and $x_3 - 15x_4 =0$\\
+It can be seen that (-2,1,0,0) and (0,0,15,1) form a basis of Y. Thus $dim Y = 2$\\
+\\
+\textbf{Exercise 15}\\
+\\
+(a) P is linear because\\
+$P(A+B)$ = ($(A+B)$ + $^t\!(A+B)$)/2\\
+= ($A+^t\!A + B + ^t\!B$)/2 = $P(A)+P(B)$\\
+If c is a scalar then'\\
+$P(cA) = (cA + ^t\!(cA))/2$\\
+= $c(A+^t\!A)/2$ = $cP(A)$\\
+(b) By definition of skew-symmetric matrix, an $nxn$ matrix A is skew symmetric if $^t\!A=-A$. the kernel of P shows $P(A)=0$, hence $A+^t\!A=0$ which equals $^t\!A=-A$.\\
+(c)If $Sym_n(K)$ is the set of $nxn$ matrices and $Sk_(K)$ is the set of skew symmetric matrices, then\\
+$Mat_{nxn}(K)=Sym_n(K)+Sk_n(K)$,\\
+Hence,\\
+dim Ker P= $n^2- n(n+1)/2= n(n-1)/2$
+\\
+\\
+\textbf{Section 4} \\
+\textbf{Exercise 2}\\
+\\
+\noindent Because $DimV = Dim KerL + Dim ImL$ and $ImL$ is a subspace of W.\\
+So $Dim ImL \leq Dim W$\\
+Because $DimV > DimW$\\
+So $DimV - DimImL > 0$ and then $DimKerL > 0$\\
+\\
+\textbf{Exercise 7}\\
+\\
+\noindent If we want to prove that $L$ is invertible, we need to prove that the kernel of $L$ is $\{O\}$ and $L$ is surjective.\\
+The first step is to prove that the kernel of $L$ is $\{O\}$:\\
+The kernel of $L$ is:
+$$\left\{
+\begin{aligned}
+2x&+& y= 0 \\
+3x&-&5y= 0 \\
+\end{aligned}
+\right.
+$$ 
+Which is equal to:
+$$\left\{
+\begin{aligned}
+x= 0 \\
+y= 0 \\
+\end{aligned}
+\right.
+$$ 
+which means the kernel of $L$ is $\{O\}$.\\
+Then we will do our second step:\\
+we know that $L(x,y) = (2x+y,3x-5y)$ so we can easily conclude that $DimImL = 2$. Because $DimImL$ is a subspace of $R^2$ and $DimIm = DimR^2 = 2$. So $ImL$ is equal to $R^2$ which means $L$ is surjective.\\
+So according to two conclusions we got above we can prove that $L$ is invertible.\\
+\\
+\textbf{Exercise 9}\\
+a. $I - L^2 = I$\\
+hence $(I+L)(I+L)=I$,\\
+The inverse of I-L is I+L\\
+b. $I=L(-L-2)$\\
+The inverse of L is -L-2\\
+c. $I=(I-L)(I+L+L^2)$
+The inverse of I-L is $I+L+L^2$\\
+\\
+\textbf{Exercise 17}\\
+$I=A-A^2$\\
+hence$I=A(I-A)$,\\
+the inverse of A is I-A\\.
+Generalize\\
+$I-A^(n+1)=(I-A)(I+A+...+A^n)=I$
+
+
+
+\end{document}
