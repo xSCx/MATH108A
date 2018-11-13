@@ -1,0 +1,88 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[margin=1.25in]{geometry}
+
+\usepackage{comment}
+
+\begin{document}
+
+\begin{center}
+{ \bf HW \#1 solutions}\\
+\ \\
+\end{center}
+
+
+ -(1)  $A_1=\mathbb R^3$, since $\,\vec v_1,\,\vec v_2,\,\vec v_3$ are linearly independent.
+\vskip.1in
+$A_2$ is the solid pyramidal cone with vertex the origin $(0,0,0)$ and edges given by the positive multiples of $\,\vec v_1,\,\vec v_2,\,\vec v_3$ resp.
+\vskip.1in
+$A_3$ the solid pyramid with vertices $\,\vec v_1,\,\vec v_2,\,\vec v_3$ and $(0,0,0)$.
+\vskip.1in
+$A_4$ the triangle in $\mathbb R^3$ with vertices $\,\vec v_1,\,\vec v_2,\,\vec v_3$.
+\vskip.1in
+$A_5$ the plane passing along the points $\,\vec v_1,\,\vec v_2,\,\vec v_3$.
+
+
+\vskip.3in
+
+
+
+ -(2) Assume that 
+$$
+\cup_{k=1}^n V_k
+$$
+is a sub-space and that if there does not exist $j_0\in\{1,2,..,n\}$ such that
+$$
+\cup_{k=1}^n V_k=V_{j_0}.
+$$ 
+
+\vskip.1in
+Without lost of generality we can assume that for any $j\in \{1,..,n\}$ 
+
+$$
+V_j\not\subset V_1\cup..\cup V_{j-1}\cup V_{j+1}\cup..\cup V_n.
+$$
+
+Hence, there exists 
+
+$$
+\vec x_1\in V_1,\;\;\;\;\;\vec x_1\notin V_2\cup....\cup  V_n
+$$
+
+ and there exists  
+ 
+ $$\vec x_2\in V_2,\;\;\;\;\;\vec x_2\notin V_1 \cup V_3\cup..\cup V_n.$$
+
+
+Consider the sequence of vectors
+
+$$
+\vec v_m = \vec x_1 + m\vec x_2,\;\;\;\;\;\;\;\;\;\;\;\;\;\;m \in\mathbb N.
+$$
+
+Since 
+$$
+\vec v_m \in \cup_{k=1}^n V_k,\;\;\;\;\;\;\;\forall \,m\in \mathbb N,
+$$
+
+there 
+exists $j_0\in\{1,..,n\}$ and $m_1,\,m_2\in \mathbb N$ with $m_1\neq m_2$ such that
+
+$$
+\vec v_{m_1}= \vec x_1 + m_1\vec x_2 \in V_{j_0},\;\;\;\;\;\;\,\vec v_{m_2}= \vec x_1 + m_2\vec x_2 \in V_{j_0}.
+$$
+
+Therefore, 
+
+$$
+x_1,\,x_2\in  V_{j_0}.
+$$
+
+which yields a contradiction. 
+  
+\end{document}
+
+
+
+
+
