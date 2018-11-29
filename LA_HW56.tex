@@ -1,0 +1,236 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[margin=1.25in]{geometry}
+
+\usepackage{comment}
+
+\begin{document}
+
+\begin{center}
+{\bf 108A HW 5,6 }\\
+\end{center}
+\rightline{Yuchen Wang,Luis Ramirez,Shengbo Zhang}
+\textbf{Exercise 1}\\
+Find a linear map $T: \mathbb{R}^3 \rightarrow \mathbb{R}^4$ such that\\
+Ker(T)= $\left\{\begin{pmatrix}
+x\\
+y\\
+z\\
+\end{pmatrix} \in \mathbb{R}^3: x-y+2z=0, x+3y+z=0\right\},$\\
+Im(T)= $\left\{\begin{pmatrix}
+x\\
+y\\
+w\\
+z\\
+\end{pmatrix} \in \mathbb{R}^4: x+y+w+z=0, x-y-w+2z=0\right\},$\\
+im(T)= $\left\{\begin{pmatrix}
+1\\
+1\\
+1\\
+1\\
+\end{pmatrix}, \begin{pmatrix}
+1\\
+-1\\
+-1\\
+2\\
+\end{pmatrix}\right\},$\\
+Im(t)= span$\left\{\begin{pmatrix}
+1\\
+1\\
+1\\
+1\\
+\end{pmatrix}, \begin{pmatrix}
+1\\
+-1\\
+-1\\
+2\\
+\end{pmatrix}, \begin{pmatrix}
+2\\
+0\\
+0\\
+3\\
+\end{pmatrix}\right\},$\\
+$T\begin{pmatrix}
+x\\
+y\\
+w\\
+z\\
+\end{pmatrix} = (x+y+w+z, x-y-w+2z, 2x+3z)$\\
+\\
+\textbf{Exercise 2}\\
+Find a linear map $T: \mathbb{R}^4 \rightarrow \mathbb{R}^4$ such that\\
+Ker(T)= $\left\{\begin{pmatrix}
+x\\
+y\\
+w\\
+z\\
+\end{pmatrix} \in \mathbb{R}^4: x-y+w=0, x+z=0\right\},$\\
+Im(T)= $\left\{\begin{pmatrix}
+x\\
+y\\
+w\\
+z\\
+\end{pmatrix} \in \mathbb{R}^4: x+2y-4w+z=0, x-y-w+2z=0\right\},$\\
+$Ker(T)=span\left\{u=\begin{pmatrix}
+1\\
+-1\\
+1\\
+\\
+\end{pmatrix}, v=\begin{pmatrix}
+1\\
+0\\
+0\\
+1\\
+\end{pmatrix}, e1=\begin{pmatrix}
+1\\
+0\\
+0\\
+\\
+\end{pmatrix}, e2=\begin{pmatrix}
+0\\
+1\\
+0\\
+0\\
+\end{pmatrix}\right\},$\\
+
+For all (x,y,w,z)$\in \mathbb{R},\\
+(x,y,w,z)= (w)u+(z)v+(x-w-z)e1+(y+w)e2$\\
+
+$T\begin{pmatrix}
+x\\
+y\\
+w\\
+z\\
+\end{pmatrix} = (x-w-z, y+w, w,z)$\\
+\\
+\textbf{Exercise 3}\\
+To find the closest point, firstly find the basis of E.\\
+$$
+Let\ X = 
+  \left\{
+ \begin{matrix}
+   1 & 1 & 1 & 1 \\
+   1 & -1 & -1 & 0 
+  \end{matrix}
+  \right\},
+$$
+r(x) = 2,\\
+dim(E) = 4 - 2 = 2.\\
+Let a orthogonal basis of E be {(1,1,1,0),(0,0,0,1)}\\
+The\ answer\ is\ $Proj_{\vec w}$.
+\begin{displaymath}
+Proj_{\vec w}=
+\frac{\vec w \cdot x_1}{x_1 \cdot x_1}\cdot x_1 +
+\frac{\vec w \cdot x_2}{x_2 \cdot x_2}\cdot x_2
+\end{displaymath}
+\begin{displaymath}
+=
+\frac{6}{3} \cdot (1,1,1,0) +
+\frac{4}{1} \cdot (0,0,0,1)
+\end{displaymath}
+\begin{displaymath}
+=(2,2,2,4)
+\end{displaymath}
+so the closest point is (2,2,2,4).\\
+$\vec v\ -\ \vec w$ is the direction which is orthogonal to the sub-space E and towards $\vec w$.\\
+\\
+\textbf{Exercise 4}\\
+1.Prove $Ker(T_{A^t}) \ =\ {(Image(T_A))}^\perp$\\
+Let $A_t\vec y=0$\\
+$$
+<{A_t}^{-1}(0),A \vec x> = {\vec y}^t \cdot A\vec x = (A_t\cdot\vec y)^t\cdot \vec x = \vec 0\cdot \vec x= 0
+$$
+Prove done\\
+2.Prove ${Image(T_{A^t)}}=(Ker(T_A))^\perp$\\
+Let $A_t\vec x=0$\\
+$$
+<A^t\vec y,{A_t}(0)>=(A^t\vec y)^t\cdot \vec x={\vec y}^t\cdot(A\cdot \vec x)= {\vec y}^t\cdot \vec 0 = 0
+$$
+Prove done.\\
+\\
+\textbf {Exercise 5} \\
+we can assume that matrix A is:\\
+$$\begin{pmatrix} 
+a_{11} & a_{12} & a_{13} & a_{14}\\
+a_{12} & a_{22} & a_{23} & a_{24}\\
+a_{13} & a_{23} & a_{33} & a_{34}\\
+a_{14} & a_{24} & a_{34} & a_{44}
+\end{pmatrix}\\
+$$
+So the column $n$ is equal to row $n$. Because the kernel of the $T_A$ is $\{x+y+w+z=0,x-y-w+z=0\}$. So we can assume A is :\\
+$$\begin{pmatrix} 
+1 & 1 & 1 & 1\\
+1 & -1 & -1 & 1\\
+1 & -1 & a_{33} & a_{34}\\
+1 & 1 & a_{34} & a_{44}
+\end{pmatrix}\\
+$$
+Because $Dim V = DimKernel + DimImage$ and $DimKernel = 2$. So $DimImage = 2 = RankA$. Because the first two column are linearly independent. So we can use the linearly combination to denote the last two column. we can assume that:\\
+$$ \left\{
+\begin{aligned}
+x_1(1,1,1,1) + y_1(1,-1,-1,1) & = & (1,-1,a_{33},a_{34}) \\
+x_2(1,1,1,1) + y_2(1,-1,-1,1) & = & (1,1,a_{34},a_{44}) \\
+\end{aligned}
+\right.
+$$
+So $x_1 = 0, y_1 = 1, x_2 = 1, y_2 = 0$ and we know that $a_{33} = -1,a_{34} = 1,a_{44} = 1$. So $A = $:\\
+$$\begin{pmatrix} 
+1 & 1 & 1 & 1\\
+1 & -1 & -1 & 1\\
+1 & -1 & -1 & 1\\
+1 & 1 & 1 & 1
+\end{pmatrix}\\
+$$
+So the image of $T_A$ is :\\
+$\{(x + z)(1,1,1,1)+(y + w)(1,-1,-1,1)\} = \{ a(1,1,1,1)+b(1,-1,-1,1), a,b \in R\} $\\
+\\
+\textbf {Exercise 5}\\
+We can assume the matrix A is that:
+$$\begin{pmatrix} 
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \\
+\end{pmatrix}\\
+$$
+Since $T(v_j) = w_j$ we know that $Av_j = w_j$. And we get the equation that:\\
+$$ \left\{
+\begin{aligned}
+a_{11} + 2a_{12} + a_{13} & = 1 \\
+a_{11} - a_{13} & = 1 \\
+2a_{12} + 3a_{13} & = 0\\
+\end{aligned}
+\right.
+$$
+$$ \left\{
+\begin{aligned}
+a_{21} + 2a_{22} + a_{23} & = 2 \\
+a_{21} - a_{23} & = 0 \\
+2a_{22} + 3a_{23} & = 2\\
+\end{aligned}
+\right.
+$$
+$$ \left\{
+\begin{aligned}
+a_{31} + 2a_{32} + a_{33} & = 1 \\
+a_{31} - a_{33} & = 2 \\
+2a_{32} + 3a_{33} & = -1\\
+\end{aligned}
+\right.
+$$
+So we can get the matrix A is:\\
+$$\begin{pmatrix} 
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+2 & -0.5 & 0 \\
+\end{pmatrix}\\
+$$
+basis of image is:$(1,0,0),(0,1,0)$. Since $AX = (x,y,2x - 0.5y)$ and $(2,0.5,0) = 2(1,0,0) + 0.5(0,1,0)$\\
+basis of kernel is: $(0,0,1)$. Since kernel of $A$ is $\{(x,y,z), x=y=0\}$ which is $(0,0,z)$.
+
+
+
+
+
+
+
+\end{document}
